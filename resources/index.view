@@ -1,0 +1,6 @@
+<svg class="background">
+  <text class="clock" id="timeHM" x="40%" y="50%" />
+  <text class="clock clock-small" id="timeSec" x="75%" y="50%"/>
+  <rect class="divider" />
+  <text class="clock clock-small" id="date" x="50%" y="67%" />
+</svg>

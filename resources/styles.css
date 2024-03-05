@@ -1,0 +1,23 @@
+.background {
+  fill: gray;
+}
+
+.clock {
+  font-size: 80;
+  font-family: System-Regular;
+  text-length: 32;
+  text-anchor: middle;
+  fill: white;
+}
+
+.clock-small {
+  font-size: 40;
+  fill: gray;
+}
+
+.divider {
+  fill: darkgray;
+  height: 1;
+  width: 100%;
+  y: 54%;
+}
