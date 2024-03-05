@@ -15,6 +15,7 @@ function zeroPad(i) {
  * @param {"off" | "seconds" | "minutes" | "hours"} granularity The granularity of the clock
  * @param {"shortDate" | "longDate"} dateFormatString The format of the date
  * @param {function({ timeHM: string, timeSec: string, date: string})} callback
+ * @TODO: Use TypeScript to define types instead of using JSDoc
  */
 export function initialize(granularity, dateFormatString, callback) {
   dateFormat = dateFormatString;
@@ -25,7 +26,7 @@ export function initialize(granularity, dateFormatString, callback) {
 
 function updateClock(event) {
   const today = event.date;
-  const hours = today.getHours();
+  let hours = today.getHours();
   if (preferences.clockDisplay === "12h") {
     hours = hours % 12 || 12;
   } else {
@@ -37,12 +38,7 @@ function updateClock(event) {
 
   let timeHMString = `${hours}:${minutes}`;
   let timeSecString = `${seconds}`;
-
   let dateString = "";
-
-  if (preferences.showSeconds) {
-    timeString += `:${seconds}`;
-  }
 
   const month = today.getMonth();
   const day = today.getDay();

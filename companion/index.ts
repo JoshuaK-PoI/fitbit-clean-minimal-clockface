@@ -10,7 +10,7 @@ if (companion.launchReasons.settingsChanged) {
     sendValue("dateFormat", settingsStorage.getItem("dateFormat"));
 }
 
-function sendValue(key, value) {
+function sendValue(key: string, value: unknown) {
     if (!value) return;
 
     sendSettingData({
@@ -19,7 +19,7 @@ function sendValue(key, value) {
     });
 }
 
-function sendSettingData(data) {
+function sendSettingData(data: { key: string; value: unknown }) {
     if (messaging.peerSocket.readyState !== messaging.peerSocket.OPEN) {
         console.error("No peerSocket connection");
         throw new Error("No peerSocket connection");

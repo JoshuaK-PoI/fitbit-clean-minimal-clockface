@@ -1370,6 +1370,11 @@ figures@^3.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
+fitbit-sdk-types@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.npmjs.org/fitbit-sdk-types/-/fitbit-sdk-types-8.0.3.tgz"
+  integrity sha512-nir7pzIuAtA4/w1eb9ZVG9Qd1V22azngFF9ub4hcxECoYP7RwLmTZlsYJwXNuAo7GzEJbPVLl3OmWFkqOu0kSw==
+
 flush-write-stream@^1.0.2:
   version "1.1.1"
   resolved "https://registry.npmjs.org/flush-write-stream/-/flush-write-stream-1.1.1.tgz"
