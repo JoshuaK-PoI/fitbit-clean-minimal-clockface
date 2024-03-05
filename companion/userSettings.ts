@@ -8,7 +8,7 @@ export function initialize(callback) {
 export function get(key) {
   switch (key) {
     case "dateFormat":
-      return value === "0" ? "shortDate" : "longDate";
+      return settingsStorage.getItem("dateFormat") === "0" ? "shortDate" : "longDate";
 
     default:
       return settingsStorage.getItem(key);

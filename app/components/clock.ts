@@ -2,11 +2,11 @@ import clock from "clock";
 import { preferences } from "user-settings";
 import { intl } from "../intl/en-US";
 
-let dateFormat, clockCallback;
+let dateFormat: string, clockCallback: (arg0: { timeHM: string; timeSec: string; date: string; }) => void;
 
-function zeroPad(i) {
+function zeroPad(i: number): number | string {
   if (i < 10) {
-    i = "0" + i;
+    return "0" + i;
   }
   return i;
 }

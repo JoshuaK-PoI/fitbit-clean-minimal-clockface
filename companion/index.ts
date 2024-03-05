@@ -3,6 +3,11 @@ import * as messaging from "messaging";
 import { me as companion } from "companion";
 
 settingsStorage.addEventListener("change", (event) => {
+    if (event.key === null) {
+        console.error("Event key is null");
+        return;
+    }
+    
     sendValue(event.key, event.newValue);
 });
 
